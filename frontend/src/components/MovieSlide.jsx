@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react"
 import MovieCard from "./MovieCard"
 import { useRecoilValue } from "recoil"
-import { nowPlaying } from "../movieData"
 
-export default function MovieSlides(){
+export default function MovieSlide({lable, data}){
 
     const [movieIndex, setMovieIndex] = useState(0);
     const [windowsWidth, setWindowsWidth] = useState(window.innerWidth);
@@ -38,9 +37,7 @@ export default function MovieSlides(){
         }
     }
 
-    const nowPlayingMovies = useRecoilValue(nowPlaying);
-
-    const filteredData = nowPlayingMovies.map(val => ({
+    const filteredData = data.map(val => ({
         backdrop_path: val.backdrop_path,
         id: val.id,
         original_language: val.original_language,
@@ -62,11 +59,11 @@ export default function MovieSlides(){
 
     return(
         <>
-            <h2 className="text-2xl text-white text-bold m-8">Recomended for You</h2>
+            <h2 className="text-2xl text-white text-bold m-8">{lable}</h2>
             <div className="flex items-center">
-            {movieIndex >= 5 && 
-            <svg onClick={handlePrev} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-20 h-20 text-white m-auto">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            {movieIndex >= 2 && 
+            <svg onClick={handlePrev} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-20 h-20 text-white m-auto">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
             </svg>}
             {visibleMovies.map(movie => 
             <MovieCard 
@@ -79,8 +76,8 @@ export default function MovieSlides(){
                 rating={movie.vote_average}
                 description={movie.overview}
             ></MovieCard>)}
-            <svg onClick={handleNext} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-20 h-20 text-white m-auto">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            <svg onClick={handleNext} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-20 h-20 text-white m-auto">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
             </svg>
 
             </div>

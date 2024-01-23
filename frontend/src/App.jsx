@@ -2,9 +2,9 @@ import React, { useContext } from "react"
 import TopBar from "./components/TopBar";
 import { baseImageUrl } from "./baseImageUrl";
 import MainMovieCard from "./components/MainMovieCard";
-import MovieSlide from "./components/MovieSlide";
 import Footer from "./components/Footer";
 import { RecoilRoot } from "recoil";
+import MoviesSlides from "./components/MoviesSlides";
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
       <TopBar></TopBar>
       <baseImageUrl.Provider value={"https://image.tmdb.org/t/p/w500"}>
         <MainMovieCard></MainMovieCard>
-        <RecoilRoot>
-          <MovieSlide></MovieSlide>
+        <RecoilRoot>  
+          <MoviesSlides></MoviesSlides>
         </RecoilRoot>
       </baseImageUrl.Provider>
       <Footer></Footer>
