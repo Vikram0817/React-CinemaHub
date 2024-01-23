@@ -32,6 +32,8 @@ export default function MovieSlide({lable, data}){
             return 2;
         }else if(width < 768){
             return 3;
+        }else if(width < 868){
+
         }else {
             return 5
         }

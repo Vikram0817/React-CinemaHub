@@ -9,6 +9,7 @@ export default function MovieCard({
   releaseDate,
   rating,
   description}) {
+    
   const baseURL = useContext(baseImageUrl);
   const [isMouseOver, setIsMouseOver] = useState(false);
 
@@ -18,6 +19,11 @@ export default function MovieCard({
 
   function handleMouseOut() {
     setIsMouseOver(false);
+  }
+
+  function round(value, precision) {
+    var multiplier = Math.pow(10, precision || 0);
+    return Math.round(value * multiplier) / multiplier;
   }
 
   return (
@@ -31,13 +37,16 @@ export default function MovieCard({
         src={`${baseURL}${poster}`}
         alt="recomended movie"
       />
-      {isMouseOver && (
-        <div className="flex flex-col absolute w-full bottom-0 p-3 bg-black bg-opacity-50 text-white">
-          <p className="">{title}</p>
-          <p className="">{releaseDate}</p>
-          <p>{rating}</p>
-        </div>
-      )}
+  {isMouseOver && (
+    <div className="flex flex-col absolute w-full bottom-0 p-3 bg-black bg-opacity-80 text-white rounded-t-md">
+      <p className="text-lg font-semibold">{title}</p>
+      <div className="flex items-center mt-1">
+        <span className="text-sm">Year of Release: {releaseDate.split("-")[0]}</span>
+        <span className="ml-2 text-sm">Rating: {round(rating, 1)} ☆</span>
+      </div>
+    </div>
+  )}
+
     </div>
   );
 }

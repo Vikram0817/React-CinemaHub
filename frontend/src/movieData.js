@@ -13,8 +13,7 @@ async function fetchMovieData(endpoint) {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`
         }
-      });
-      console.log(response.data.results);
+      })
       return response.data.results;
     } catch (error) {
         console.error(error);
@@ -34,6 +33,23 @@ endPoints.forEach(endPoint => {
           }
         }),
     });
+})
+
+const movieGeners = atom({
+    key: "geners",
+    default: selector({
+        key: "geners/default",
+        get: async () => {
+            const url = 'https://api.themoviedb.org/3/genre/movie/list?language=en';
+            const res = await axios.get(url, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`
+                  }
+            })
+            return res;
+        }
+    })
 })
 
 export default movieAtoms;
