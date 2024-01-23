@@ -30,12 +30,12 @@ export default function MovieSlide({lable, data}){
     function getCardsPerPage(width){
         if(width < 640){
             return 2;
-        }else if(width < 768){
+        }else if(width < 800){
             return 3;
-        }else if(width < 868){
-
+        }else if(width < 1080){
+            return 4;
         }else {
-            return 5
+            return 5;
         }
     }
 
