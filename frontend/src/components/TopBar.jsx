@@ -3,7 +3,7 @@ import React from "react";
 export default function TopBar(){
     return(
         <div className="border-2 border-black bg-black flex justify-between">
-            <h1 className="text-3xl font-bold text-green-600 p-2 ml-4 drop-shadow">CinemaHub</h1>
+            <h1 className="text-3xl font-bold text-yellow-400 p-2 ml-4 drop-shadow">CinemaHub</h1>
             
             <div className="flex items-center p-2">
             <form className="flex items-center">   

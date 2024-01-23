@@ -24,7 +24,7 @@ export default function MovieCard({
     <div
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
-      className="m-8 relative"
+      className="ml-8 relative"
     >
       <img
         className="max-h-36 max-w-60 w-full h-full transform scale-100 transition-transform duration-300 hover:scale-125"
@@ -32,7 +32,7 @@ export default function MovieCard({
         alt="recomended movie"
       />
       {isMouseOver && (
-        <div className="flex flex-col absolute bottom-0 p-3 bg-black text-white">
+        <div className="flex flex-col absolute w-full bottom-0 p-3 bg-black bg-opacity-50 text-white">
           <p className="">{title}</p>
           <p className="">{releaseDate}</p>
           <p>{rating}</p>
