@@ -1,9 +1,6 @@
-import React, { useContext } from "react";
-import { baseImageUrl } from "../baseImageUrl";
+import React from "react";
 
 export default function MainMovieCard(){
-
-    const baseURL = useContext(baseImageUrl)
     
     return(
         <div className="h-4/6">

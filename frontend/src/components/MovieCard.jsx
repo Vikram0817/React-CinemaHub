@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import { baseImageUrl } from "../baseImageUrl";
 
 export default function MovieCard({
   id,
@@ -10,7 +9,7 @@ export default function MovieCard({
   rating,
   description}) {
     
-  const baseURL = useContext(baseImageUrl);
+  const baseURL = "https://image.tmdb.org/t/p/w500"
   const [isMouseOver, setIsMouseOver] = useState(false);
 
   function handleMouseOver() {

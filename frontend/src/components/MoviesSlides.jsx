@@ -1,6 +1,6 @@
 import React from "react";
 import MovieSlide from "./MovieSlide";
-import { RecoilRoot, useRecoilValue } from "recoil";
+import { useRecoilValue } from "recoil";
 import movieAtoms from "../movieData";
 
 export default function MoviesSlides(){
