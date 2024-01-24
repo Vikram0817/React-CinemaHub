@@ -31,21 +31,20 @@ export default function MovieCard({
       onMouseOut={handleMouseOut}
       className="ml-8 relative"
     >
-      <img
-        className="max-h-36 max-w-60 w-full h-full transform scale-100 transition-transform duration-300 hover:scale-125"
-        src={`${baseURL}${poster}`}
-        alt="recomended movie"
-      />
-  {isMouseOver && (
-    <div className="flex flex-col absolute w-full bottom-0 p-3 bg-black bg-opacity-80 text-white rounded-t-md">
-      <p className="text-lg font-semibold">{title}</p>
-      <div className="flex items-center mt-1">
-        <span className="text-sm">Year of Release: {releaseDate.split("-")[0]}</span>
-        <span className="ml-2 text-sm">Rating: {round(rating, 1)} ☆</span>
+    <img
+      className="max-h-36 max-w-60 w-full h-full transform scale-100 transition-transform duration-300 hover:scale-125"
+      src={`${baseURL}${poster}`}
+      alt="recomended movie"
+    />
+    {isMouseOver && (
+      <div className="flex flex-col absolute w-full bottom-0 p-2 bg-black bg-opacity-80 text-white rounded-t-md">
+        <p className="text-lg font-semibold">{title}</p>
+        <div className="flex items-center mt-1">
+          <span className="text-sm">Year of Release: {releaseDate.split("-")[0]}</span>
+          <span className="ml-2 text-sm">Rating: {round(rating, 1)} ☆</span>
+        </div>
       </div>
-    </div>
-  )}
-
+    )}
     </div>
   );
 }

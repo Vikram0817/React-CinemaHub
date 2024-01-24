@@ -18,7 +18,6 @@ export default function TopBar(){
         }
     })
 
-    console.log(scrolled);
     return(
         <div className={`flex justify-between z-10 w-full transition-all duration-300 
         ${scrolled ? 'bg-black fixed text-yellow-400' : 'bg-transparent absolute text-black'}`}>
