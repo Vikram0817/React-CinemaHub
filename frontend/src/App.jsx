@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import TopBar from "./components/TopBar";
 import { baseImageUrl } from "./baseImageUrl";
 import MainMovieCard from "./components/MainMovieCard";

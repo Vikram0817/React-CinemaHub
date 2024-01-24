@@ -11,7 +11,7 @@ function Footer(){
           </div>
           <div className="flex space-x-4">
             <a href="#" className="text-gray-300 hover:text-white">About Us</a>
-            <a href="#" className="text-gray-300 hover:text-white">Contact</a>
+            <a href="https://github.com/Vikram0817" className="text-gray-300 hover:text-white">Contact</a>
             <a href="#" className="text-gray-300 hover:text-white">Privacy Policy</a>
           </div>
         </div>
