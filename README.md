@@ -1,14 +1,32 @@
-- DONE ✅
-    - Get requests for - 
-        - recomended
-        - favoraits
-        - top rated
-        - upcoming
-    - 1 main movie like nf
-    - 4 srollable recomendations
-    - import data from api and show movies on web
-    - Footer
-    - make movie slides scrollable
-    - on hovering show about movie
-    - top bar transition like netflix
-    
+# CinemaHub Movie App
+
+CinemaHub is a movie recommendation and information website that provides users with access to a curated list of movies. It allows users to explore popular, top-rated, upcoming movies, and manage their favorites.
+
+## Features
+
+- **Now Playing:** Discover the latest movies currently in theaters.
+- **Popular Movies:** Explore a collection of popular movies.
+- **Top Rated Movies:** Find movies with the highest user ratings.
+- **Upcoming Movies:** Stay informed about upcoming releases.
+- **Favorites:** Mark movies as favorites for quick access.
+- **Responsive Design:** Enjoy a seamless experience across devices.
+
+## Tech Stack
+
+- **Frontend:** React.js
+- **State Management:** Recoil 
+- **Styling:** Tailwind CSS
+- **Movie Data:** The Movie Database (TMDb) API
+
+## Getting Started
+
+1. Clone the repository.
+2. Install dependencies: `npm install`
+3. Set up your environment variables.
+4. Run the app: `npm start`
+
+## Configuration
+
+- Create an account on [The Movie Database (TMDb)](https://www.themoviedb.org/) to obtain an API key.
+- Configure your API key in the `.env` file.
+
