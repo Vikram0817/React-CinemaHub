@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import MovieCard from "./MovieCard"
-import { useRecoilValue } from "recoil"
 
 export default function MovieSlide({lable, data}){
 

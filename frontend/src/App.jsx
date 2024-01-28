@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="h-full bg-black">
       <TopBar></TopBar>
-        <MainMovieCard></MainMovieCard>
-        <RecoilRoot>  
-          <MoviesSlides></MoviesSlides>
-        </RecoilRoot>
+      <RecoilRoot> 
+        <MainMovieCard></MainMovieCard> 
+        <MoviesSlides></MoviesSlides>
+      </RecoilRoot>
       <Footer></Footer>
     </div>
   )

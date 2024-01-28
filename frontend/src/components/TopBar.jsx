@@ -19,8 +19,8 @@ export default function TopBar(){
     })
 
     return(
-        <div className={`flex justify-between z-10 w-full transition-all duration-300 
-        ${scrolled ? 'bg-black fixed text-yellow-400' : 'bg-transparent absolute text-black'}`}>
+        <div className={`flex justify-between text-yellow-400 z-10 w-full transition-all duration-300 
+        ${scrolled ? 'bg-black fixed' : 'bg-transparent absolute'}`}>
             {/* heading/Logo */}
             <h1 className="text-3xl font-bold p-2 ml-4 drop-shadow-md">CinemaHub</h1>   
             <div className="flex items-center p-2">
